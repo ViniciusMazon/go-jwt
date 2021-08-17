@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/hyperyuri/webapi-with-go/database/migrations"
+	"github.com/viniciusmazon/go-jwt/database/migrations"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

@@ -11,12 +11,12 @@ func CreateUser(c *gin.Context) {
 	db := database.GetDatabase()
 
 	var p models.User
+
 	err := c.ShouldBindJSON(&p)
 	if err != nil {
 		c.JSON(400, gin.H{
 			"error": "cannot bind JSON: " + err.Error(),
 		})
-
 		return
 	}
 
@@ -25,11 +25,10 @@ func CreateUser(c *gin.Context) {
 	err = db.Create(&p).Error
 	if err != nil {
 		c.JSON(400, gin.H{
-			"error": "cannot create user: " + err.Error(),
+			"error": "cannot create book: " + err.Error(),
 		})
-
 		return
 	}
 
-	c.Status(201)
+	c.Status(204)
 }
