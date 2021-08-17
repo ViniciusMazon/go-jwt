@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/viniciusmazon/go-server/server/routes"
+	"github.com/viniciusmazon/go-jwt/server/routes"
 )
 
 type Server struct {

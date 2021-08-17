@@ -4,8 +4,8 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/viniciusmazon/go-server/database"
-	"github.com/viniciusmazon/go-server/models"
+	"github.com/viniciusmazon/go-jwt/database"
+	"github.com/viniciusmazon/go-jwt/models"
 )
 
 func ShowBook(c *gin.Context) {

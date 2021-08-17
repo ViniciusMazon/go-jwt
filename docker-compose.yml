@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: .dockerfile
-    image: github.com/viniciusmazon/go-server
+    image: github.com/viniciusmazon/go-jwt
     container_name: webapi-mvc-db
     restart: unless-stopped
     tty: true
