@@ -2,6 +2,7 @@ package services
 
 import (
 	"fmt"
+	"os"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
@@ -14,7 +15,7 @@ type jwtService struct {
 
 func NewJWTService() *jwtService {
 	return &jwtService{
-		secretKey: "my-super-secret",
+		secretKey: os.Getenv("SECRET_KEY"),
 		issure:    "book-api",
 	}
 }
