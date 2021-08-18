@@ -3,6 +3,7 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/viniciusmazon/go-jwt/controllers"
+	"github.com/viniciusmazon/go-jwt/server/middlewares"
 )
 
 func ConfigRoutes(router *gin.Engine) *gin.Engine {
@@ -13,7 +14,7 @@ func ConfigRoutes(router *gin.Engine) *gin.Engine {
 			user.POST("/", controllers.CreateUser)
 		}
 
-		books := main.Group("books")
+		books := main.Group("books", middlewares.Auth())
 		{
 			books.GET("/:id", controllers.ShowBook)
 			books.GET("/", controllers.ShowBooks)
