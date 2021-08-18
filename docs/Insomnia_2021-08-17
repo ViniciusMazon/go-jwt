@@ -1,0 +1,275 @@
+_type: export
+__export_format: 4
+__export_date: 2021-08-18T02:03:47.112Z
+__export_source: insomnia.desktop.app:v2021.2.2
+resources:
+  - _id: req_e01e1788c34c4bce8016b2d8f9637e78
+    parentId: fld_12a760330d204820bbcb329a498a1a48
+    modified: 1629251716568
+    created: 1629251082162
+    url: "{{ _.baseURL }}/login"
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "vnpmazon@gmail.com",
+        	"password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_db00647f08564a0591c8909a045de8cc
+    authentication: {}
+    metaSortKey: -1629251082162
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_12a760330d204820bbcb329a498a1a48
+    parentId: wrk_f5dad1af50a949b1916b26be37dec116
+    modified: 1629251077457
+    created: 1629251077457
+    name: Login
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1629251077457
+    _type: request_group
+  - _id: wrk_f5dad1af50a949b1916b26be37dec116
+    parentId: null
+    modified: 1629154355862
+    created: 1629154355863
+    name: go-sever
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_e8640f708530436b88446d4f7d9fae4a
+    parentId: fld_73163cf04f45464f8c78e5ab0238fb91
+    modified: 1629235858742
+    created: 1629235265102
+    url: "{{ _.baseURL }}/user"
+    name: Create user
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Vinicius",
+        	"email": "vnpmazon@gmail.com",
+        	"password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_3b39df9f25144399a7d444042a27eac9
+    authentication: {}
+    metaSortKey: -1629235265102
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_73163cf04f45464f8c78e5ab0238fb91
+    parentId: wrk_f5dad1af50a949b1916b26be37dec116
+    modified: 1629235249255
+    created: 1629235249255
+    name: User
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1629235249255
+    _type: request_group
+  - _id: req_e2f273c35b114147972481179934329b
+    parentId: fld_05ec3c4a8f484d1193cf775fb934ede7
+    modified: 1629252191802
+    created: 1629156700380
+    url: "{{ _.baseURL }}/books/1"
+    name: List book by id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1629156700380
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_05ec3c4a8f484d1193cf775fb934ede7
+    parentId: wrk_f5dad1af50a949b1916b26be37dec116
+    modified: 1629154395623
+    created: 1629154395623
+    name: Books
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1629154395623
+    _type: request_group
+  - _id: req_d07fa271ed9b40d1857ba42f09008fa3
+    parentId: fld_05ec3c4a8f484d1193cf775fb934ede7
+    modified: 1629252185908
+    created: 1629156685028
+    url: "{{ _.baseURL }}/books/1"
+    name: Delete book
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1629156685028
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f78c166c12794355968267f128f3abee
+    parentId: fld_05ec3c4a8f484d1193cf775fb934ede7
+    modified: 1629252179499
+    created: 1629156672839
+    url: "{{ _.baseURL }}/books"
+    name: Create book
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"name": "Go Básico",
+        	"description": "Melhor livro de Go para um iniciante",
+        	"medium_price": 60.00,
+        	"author": "Fulano",
+        	"img_url": "https://m.media-amazon.com/images/I/41rx5BnH2pL._SX260_.jpg"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_3f03d121ba6741588e923c24a6602ce4
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1629156672839
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2efd76e42e1c4fd89b091ce23facc3c7
+    parentId: fld_05ec3c4a8f484d1193cf775fb934ede7
+    modified: 1629252174051
+    created: 1629156657401
+    url: "{{ _.baseURL }}/books"
+    name: Edit book
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"id": 1,
+        	"name": "Go Básico - Abril",
+        	"description": "Melhor livro de Go para um iniciante",
+        	"medium_price": 60.00,
+        	"author": "Fulano",
+        	"img_url": "https://m.media-amazon.com/images/I/41rx5BnH2pL._SX260_.jpg"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_464b7565d5044222bacc6640a7484215
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1629156657401
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b70970ea8fd54551b07f692df29126ba
+    parentId: fld_05ec3c4a8f484d1193cf775fb934ede7
+    modified: 1629251950001
+    created: 1629154378574
+    url: "{{ _.baseURL }}/books"
+    name: List books
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    metaSortKey: -1629154378575
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_be969823c4e94e6cf81358356cf57110bda55e1b
+    parentId: wrk_f5dad1af50a949b1916b26be37dec116
+    modified: 1629252166143
+    created: 1629154356292
+    name: Base Environment
+    data:
+      baseURL: localhost:5000/api/v1
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdW0iOjEsImV4cCI6MTYyOTI1OTMzNywiaWF0IjoxNjI5MjUyMTM3LCJpc3MiOiJib29rLWFwaSJ9.TOhMO7HHMvR3dEkc7JnsWJ3rb2U847wMyJAL397s9Us
+    dataPropertyOrder:
+      "&":
+        - baseURL
+        - token
+    color: null
+    isPrivate: false
+    metaSortKey: 1629154356292
+    _type: environment
+  - _id: jar_be969823c4e94e6cf81358356cf57110bda55e1b
+    parentId: wrk_f5dad1af50a949b1916b26be37dec116
+    modified: 1629154356301
+    created: 1629154356301
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_bba2da11c46040ac96da3175102777ad
+    parentId: wrk_f5dad1af50a949b1916b26be37dec116
+    modified: 1629154355890
+    created: 1629154355890
+    fileName: go-sever
+    contents: ""
+    contentType: yaml
+    _type: api_spec
